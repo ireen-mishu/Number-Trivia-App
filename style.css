@@ -55,6 +55,7 @@ body{
     padding: 2.8em 1.8em;
     border-radius: 0.6em;
     border: none;
+    display: none;
     box-shadow: 0.6em solid #FA815A;
 
 }

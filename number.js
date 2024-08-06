@@ -13,4 +13,24 @@ let fetchFact =(num) => {
         document.querySelector(".container").append(fact);
     });
 };
-fetchFact(18);
+let getFact = () => {
+    let num = document.getElementById("num").value;
+    // check if input number is not empty
+    // if not empty
+    if (num){
+        // check if number lies between 0 and 300
+        // if yes
+        if (num >= 0 && num<=300){
+            fetchFact(num);
+        }
+        // if number is less than 0 or greater than 300 display error message.
+        else{
+            fact.style.display="block";
+            fact.innerHTML = `<p class="msg">Please enter a number between 0 to 300.</p>`;
+        }
+    }
+    else{
+        fact.style.display="block";
+            fact.innerHTML = `<p class="msg">The input field cannot be empty.</p>`
+    }
+}
